@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>One Piece Multiverse: Save Ace!!</title>
+  </head>
+  <body>
+    <main>
+      <!-- #game-intro is initially shown on the game start screen -->
+      <div id="game-intro">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <img src="./images/header-img.png" alt="" class="header-img" />
+        <h2>Story</h2>
+        <p>Ace has been captured by the marines. The world government sees him as a threat as he is the only son of Gol D. Roger, the late King of the Pirates, and wants to execute him publicly at Marineford. Help Luffy to save his sworn brother!</p>
+        <h2>Instructions</h2>
+        <p>Move up and down to navigate Luffy through Marineford</br>
+            Fight the Marines trying to stop him but make sure not to injure any allies</br>
+            Each fight drains Luffy's energy, so make sure to pick up any meat on the way</br>
+        </br></br>
+            Change the course of history - save Ace!</p>
+        <button id="start-button">Start Game</button>
+        <img src="./images/arrows.png" alt="" class="arrows-img" />
+      </div>
+
+      <div id="game-container">
+        <div id="game-stats">
+          <h2>Stats</h2>
+          <p>Energy: <span id="energy"> 0</span></p>
+          <p>Allies: <span id="allies"> 0</span></p>
+        </div>
+        <!-- #game-screen is initially hidden using CSS style display: none -->
+        <div id="game-screen"></div>
+      </div>
+
+      <!-- #game-end is initially hidden using CSS style display: none -->
+      <div id="game-end">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <h1>Game Over</h1>
+        <br />
+        <button id="restart-button">Restart</button>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/obstacle.js"></script>
+    <script type="text/javascript" src="js/ally.js"></script>
+    <script type="text/javascript" src="js/meat.js"></script>
+  </body>
+</html>
