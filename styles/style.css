@@ -1,100 +1,154 @@
 html {
-    box-sizing: border-box;
-    font-size: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: #8db3ca;
+  color: white;
+  font-weight: 50;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+p {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 10px 300px 20px 300px;
+}
+
+#game-intro {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: url("/images/ace-intro.jpeg") no-repeat fixed;
+  background-color: #8db3ca;
+  background-position: bottom;
+  background-size: 600px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#game-screen {
+  display: none;
+  align-content: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  background: url("/images/game-background\ \(2\).png");
+  background-size: 100% auto;
+  animation: slide 50s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 1500px 0;
   }
-  
-  body {
-    background-color: #8db3ca;
-    color: white;
-    font-weight: 50;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  h2 {
-    text-decoration: underline;
-  }
-  
-  p {
-    display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    margin: 10px 300px 20px 300px;
-  }
-  
-  #game-intro {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background: url('/images/ace-intro.jpeg') no-repeat fixed;
-    background-color: #8db3ca;
-    background-position: bottom;
-    background-size: 600px;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  #game-screen {
-    display: none;
-    align-content: center;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    background-image: url("/images/game-background.png");
-    background-size: 100% auto;
-    animation: slide 50s linear infinite;
-  }
-  
-  @keyframes slide {
-    0% {
-      background-position: 1500px 0;
-    }
-    95% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 50px 0;
-    }
-  }
-  
-  #game-stats {
-    box-sizing: border-box;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.5); 
-    border: 2px solid black;
-    color: black;
-    font-weight: bolder;
-    display: none;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-    margin-top: 50px;
-    z-index: 2; 
-  }
-  
-  #game-end {
-    display: none;
-  }
-  
-  html, body {
-    width: 100%;
-  }
-  
-  .logo-img {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 20px;
-    max-width: 10%;
-    height: auto;
-  }
-  
-  .header-img {
-    max-width: 40%;
-    height: auto;
-  }
+}
+
+#game-stats {
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
+  color: black;
+  font-weight: bolder;
+  display: none;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  z-index: 2;
+  width: 25%;
+}
+
+#game-stats img {
+  height: 100px;
+  width: auto;
+}
+
+#luffyEnergy {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;
+  border-radius: 3%;
+  margin-bottom: 10px;
+}
+
+#luffyEnergy p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 10px;
+}
+
+#energyBar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 176, 17, 0.7);
+}
+
+#collectedAllies {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;
+  border-radius: 3%;
+  margin-bottom: 10px;
+}
+
+#collectedAllies p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 10px;
+}
+
+#allyBar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(17, 176, 17, 0.7);
+}
+
+#game-end {
+  display: none;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+.logo-img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  max-width: 10%;
+  height: auto;
+}
+
+.header-img {
+  max-width: 40%;
+  height: auto;
+}
