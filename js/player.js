@@ -62,5 +62,21 @@ move() {
       return false;
     }
   }
+
+  didCollideAlly(ally) {
+    const playerRect = this.element.getBoundingClientRect();
+    const allyRect = ally.element.getBoundingClientRect();
+
+    if (
+      playerRect.left < allyRect.right &&
+      playerRect.right > allyRect.left &&
+      playerRect.top < allyRect.bottom &&
+      playerRect.bottom > allyRect.top
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   
 }

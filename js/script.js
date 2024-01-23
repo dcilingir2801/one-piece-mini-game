@@ -1,6 +1,8 @@
 window.onload = function () {
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
+    const restartButtonLost = document.getElementById("restart-button-lost")
+
     let game;
   
     startButton.addEventListener("click", function () {
@@ -11,6 +13,8 @@ window.onload = function () {
       console.log("start game");
       game = new Game();
       game.start();
+    
+      window.addEventListener("keydown", handleKeydown);
     }
 
     function handleKeydown(event) {
@@ -42,7 +46,7 @@ window.onload = function () {
       }
     }
   
-    window.addEventListener("keydown", handleKeydown);
+
     restartButton.addEventListener("click", function () {
         restartGame();
       });
@@ -50,4 +54,14 @@ window.onload = function () {
       function restartGame() {
         location.reload();
       }
+      window.addEventListener("keydown", handleKeydown);
+
+      restartButtonLost.addEventListener("click", function () {
+        restartGame();
+      });
+    
+      function restartGame() {
+        location.reload();
+      }
+      window.addEventListener("keydown", handleKeydown);
 };

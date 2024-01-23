@@ -22,7 +22,6 @@
         </br></br>
             Change the course of history - save Ace!</p>
         <button id="start-button">Start Game</button>
-        <img src="./images/arrows.png" alt="" class="arrows-img" />
       </div>
 
       <div id="game-container">
@@ -35,19 +34,30 @@
                 <div id="collectedAllies">
                     <div id="allyBar"></div>
                     <p>Collected Allies</p>
-                </div>
+            </div>
         </div>
         <!-- #game-screen is initially hidden using CSS style display: none -->
         <div id="game-screen"></div>
       </div>
 
       <!-- #game-end is initially hidden using CSS style display: none -->
-      <div id="game-end">
+      <div id="game-end-won">
         <img src="./images/logo.png" alt="" class="logo-img" />
-        <h1>Game Over</h1>
+        <img src="./images/header-img.png" alt="" class="header-img" />
+        <h2>CONGRATULATIONS, YOU SAVED ACE!</h2>
         <br />
+
         <button id="restart-button">Restart</button>
       </div>
+
+      <div id="game-end-lost">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <img src="./images/header-img.png" alt="" class="header-img" />
+        <h2>GAME OVER: ACE WAS EXECUTED!</h2>
+        <br />
+        <button id="restart-button-lost">Restart</button>
+      </div>
+
     </main>
 
     <script type="text/javascript" src="js/game.js"></script>
@@ -55,6 +65,5 @@
     <script type="text/javascript" src="js/player.js"></script>
     <script type="text/javascript" src="js/obstacle.js"></script>
     <script type="text/javascript" src="js/ally.js"></script>
-    <script type="text/javascript" src="js/meat.js"></script>
   </body>
 </html>

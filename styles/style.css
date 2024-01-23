@@ -44,7 +44,7 @@ p {
   overflow: hidden;
   position: relative;
   height: 100vh;
-  background: url("/images/game-background\ \(2\).png");
+  background: url("/images/game-background.png");
   background-size: 100% auto;
   animation: slide 50s linear infinite;
 }
@@ -56,12 +56,13 @@ p {
 }
 
 #game-stats {
-  box-sizing: border-box;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 5px solid white;
+  border-style: ridge;
+  border-radius: 5%;
   color: black;
   font-weight: bolder;
   display: none;
@@ -81,10 +82,10 @@ p {
 #luffyEnergy {
   position: relative;
   height: 20px;
-  width: 100%;
+  width: 80%;
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid black;
-  border-radius: 3%;
+  border-radius: 6%;
   margin-bottom: 10px;
 }
 
@@ -107,7 +108,7 @@ p {
 #collectedAllies {
   position: relative;
   height: 20px;
-  width: 100%;
+  width: 80%;
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid black;
   border-radius: 3%;
@@ -130,13 +131,70 @@ p {
   background-color: rgba(17, 176, 17, 0.7);
 }
 
-#game-end {
+/*#game-end-won {
   display: none;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: url("/images/ace-intro.jpeg") no-repeat fixed;
+  background-color: #8db3ca;
+  background-position: bottom;
+  background-size: 600px;
+  height: 100vh;
+  overflow: hidden;
+}*/
+
+#game-end-won {
+    display: none;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: url("/images/AceSaved.gif");
+    background-color: #8db3ca;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
 }
 
-html,
-body {
-  width: 100%;
+/*#game-end-won img {
+    width: 600px;
+    height: auto;
+    margin-bottom: 30px;
+}*/
+
+#game-end-won h2 {
+    text-decoration: none;
+}
+
+#game-end-lost {
+    display: none;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: url("/images/AceDeath.jpeg");
+    background-color: #8db3ca;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+      
+#game-end-lost h2 {
+    text-decoration: none;
+}
+
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
 }
 
 .logo-img {
@@ -152,3 +210,39 @@ body {
   max-width: 40%;
   height: auto;
 }
+
+#restart-button {
+background-color: #64a6ca;
+border: 3px solid ;
+color: white;
+padding: 7px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+font-weight: bolder;
+}
+
+#restart-button-lost {
+    background-color: #64a6ca;
+    border: 3px solid ;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    }
+
+#start-button {
+    background-color: #64a6ca;
+    border: 3px solid ;
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    }

@@ -8,7 +8,7 @@ class Obstacle {
       this.height = 130;
       this.element = document.createElement("img");
   
-      this.element.src = "/images/MarineRun-ezgif.com-crop.gif";
+      this.element.src = "/images/MarineRun.gif";
       this.element.style.position = "absolute";
       this.element.style.width = `${this.width}px`;
       this.element.style.height = `${this.height}px`;
