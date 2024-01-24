@@ -62,7 +62,8 @@ p {
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.6);
-  border: 3px solid black;
+  border: 5px solid gray;
+  border-style: groove;
   border-radius: 2%;
   color: black;
   font-weight: bolder;
@@ -86,7 +87,7 @@ p {
   height: 20px;
   width: 77%;
   background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid black;
+  border: 3px solid rgb(0, 107, 0);
   border-radius: 6%;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -123,7 +124,7 @@ p {
   height: 20px;
   width: 77%;
   background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid black;
+  border: 3px solid rgb(0, 107, 0);
   border-radius: 6%;
   margin-bottom: 10px;
   margin-left: 48px;
