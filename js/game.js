@@ -7,7 +7,10 @@ class Game {
     this.gameEndScreenLost = document.getElementById("game-end-lost");
     this.energyBar = document.querySelector("#energyBar");
     this.allyBar = document.querySelector("#allyBar");
-    this.audio = document.querySelector('#audio');
+    this.audio = document.querySelector('#drumsOfLiberation');
+    this.sadSong = document.querySelector("#sadSong");
+    this.happySong = document.querySelector("#happySong");
+    this.introSong = document.querySelector("#introSong");
     this.player = new Player(
       this.gameScreen,
       200,
@@ -18,25 +21,36 @@ class Game {
     );
     this.obstacles = [];
     this.allies = [];
-    this.lives = 5;
+    this.collectedAllies = [];
+    this.lives = 3;
     this.score = 0;
     this.allyGifs = [
       "/images/Hancock.gif",
       "/images/Jinbei.gif",
+      "/images/BonChan.gif",
+      "/images/Ivankov.gif",
+      "/images/Whitebeard.gif",
+      "/images/Buggy.gif",
+      "/images/Crocodile.gif",
+      "/images/LawNew.gif",
+      "/images/Mr3.gif",
+  //  "/images/Marco.gif"
     ];
   }
 
   start() {
+    this.introSong.pause();
     this.startScreen.style.display = "none";
     this.gameStats.style.display = "flex";
     this.gameScreen.style.display = "flex";
     this.createAlly(); 
     this.gameLoop();
+    this.audio.play();
+    this.audio.loop = true;
 
   }
 
   gameLoop() {
-    this.audio.play();
     if (this.gameIsOver) {
       return;
     }
@@ -61,7 +75,7 @@ class Game {
         this.obstacles.splice(i, 1);
         this.lives--;
         i--;
-        let progress = this.lives * 20;
+        let progress = this.lives * 33;
         this.energyBar.style.width = `${progress}%`;
       } else if (obstacle.right > width) {
         obstacle.element.remove();
@@ -74,6 +88,8 @@ class Game {
       const ally = this.allies[i];
       ally.move(elapsedTime);
       if (this.player.didCollideAlly(ally)) {
+        this.collectedAllies.push(ally);
+                console.log(this.collectedAllies);
         this.score++;
         ally.element.remove();
         this.allies.splice(i, 1);
@@ -107,7 +123,23 @@ class Game {
     this.allies.push(ally);
   }
 
+  /*  createAlly() {
+    const ally = new Ally(this.gameScreen, this.allyGifs);
+    for (let i = 0; i < this.allyGifs.length; i++) {
+      if (this.collectedAllies.indexOf(ally)) {
+        return createAlly();
+      } else {
+        return this.allies.push(ally);
+      }
+  }
+}*/
+
+  stopAudio() {
+    this.audio.pause();
+  }
+
   endGameLost() {
+    this.stopAudio();
     this.player.element.remove();
     this.obstacles.forEach(function (obstacle) {
       obstacle.element.remove();
@@ -120,10 +152,11 @@ class Game {
     this.gameScreen.style.display = "none";
     this.gameStats.style.display = "none";
     this.gameEndScreenLost.style.display = "flex";
-    this.audio.remove();
+    this.sadSong.play();
   }
 
   endGameWon() {
+    this.stopAudio();
     this.player.element.remove();
     this.obstacles.forEach(function (obstacle) {
       obstacle.element.remove();
@@ -136,5 +169,6 @@ class Game {
     this.gameScreen.style.display = "none";
     this.gameStats.style.display = "none";
     this.gameEndScreenWon.style.display = "flex";
+    this.happySong.play();
   }
 }

@@ -12,6 +12,7 @@ body {
 
 h2 {
   text-decoration: underline;
+  margin-top: -5px;
 }
 
 p {
@@ -61,13 +62,13 @@ p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 5px solid gray;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 5px solid lightgray;
   border-style: groove;
   border-radius: 2%;
   color: black;
   font-weight: bolder;
-  display: flex;
+  display: none;
   align-items: center;
   align-content: center;
   flex-direction: column;
@@ -270,3 +271,10 @@ font-weight: bolder;
     font-size: 16px;
     font-weight: bolder;
     }
+
+.arrows {
+    height: 50px;
+    width: auto;
+    margin-top: -5px;
+
+}

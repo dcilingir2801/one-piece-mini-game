@@ -1,7 +1,7 @@
 class Ally {
   constructor(gameScreen, allyGifs) {
     this.gameScreen = gameScreen;
-    this.right = 1;
+    this.right = -100;
     this.top = Math.floor(Math.random() * 150 + 390);
     this.bottom = 10;
     this.width = 100;

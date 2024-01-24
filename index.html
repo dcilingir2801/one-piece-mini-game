@@ -11,14 +11,16 @@
     <main>
       <!-- #game-intro is initially shown on the game start screen -->
       <div id="game-intro">
+        <audio id="introSong" src="audio/introSong.mp3"></audio>  
         <img src="./images/logo.png" alt="" class="logo-img" />
         <img src="./images/header-img.png" alt="" class="header-img" />
         <h2>Story</h2>
         <p>Ace has been captured by the marines. The world government sees him as a threat as he is the only son of Gol D. Roger, the late King of the Pirates, and wants to execute him publicly at Marineford. Help Luffy to save his sworn brother!</p>
         <h2>Instructions</h2>
-        <p>Move up and down to navigate Luffy through Marineford</br>
-            Fight the Marines trying to stop him but make sure not to injure any allies</br>
-            Each fight drains Luffy's energy, so make sure to pick up any meat on the way</br>
+        <img src="images/arrows.png" alt="Keyboard Arrows" class="arrows">
+        <p>Use your keyboard to navigate Luffy through Marineford</br>
+            Avoid the Marines: each collision will make you lose one of your three lives</br>
+            Collect Allies: whenever you spot an ally, go and collect them - you win if you collect ten in total</br>
         </br></br>
             Change the course of history - save Ace!</p>
         <button id="start-button">Start Game</button>
@@ -26,7 +28,7 @@
 
       <div id="game-container">
         <div id="game-stats">
-            <audio id="audio" src="/onlymp3 (mp3cut.net).mp3"></audio>         
+            <audio id="drumsOfLiberation" src="audio/DrumsOfLiberation.mp3"></audio>         
                 <img src="/images/LuffyBar.png" alt="LuffyMugshot">
                 <div id="luffyEnergy"> 
                     <img src="/images/pixel-heart-2779422_640.png">
@@ -43,6 +45,7 @@
 
       <!-- #game-end is initially hidden using CSS style display: none -->
       <div id="game-end-won">
+        <audio id="happySong" src="audio/happySong.mp3"></audio>  
         <img src="./images/logo.png" alt="" class="logo-img" />
         <img src="./images/header-img.png" alt="" class="header-img" />
         <h2>CONGRATULATIONS, YOU SAVED ACE!</h2>
@@ -52,6 +55,7 @@
       </div>
 
       <div id="game-end-lost">
+        <audio id="sadSong" src="audio/SadSong.mp3"></audio>  
         <img src="./images/logo.png" alt="" class="logo-img" />
         <img src="./images/header-img.png" alt="" class="header-img" />
         <h2>GAME OVER: ACE WAS EXECUTED!</h2>
