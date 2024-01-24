@@ -39,11 +39,13 @@ p {
 #game-screen {
   display: none;
   align-content: center;
+  align-items: center;
+  width: 1440px;
+  height: 750px;
   padding: 0;
   margin: 0;
   overflow: hidden;
   position: relative;
-  height: 100vh;
   background: url("/images/game-background.png");
   background-size: 100% auto;
   animation: slide 50s linear infinite;

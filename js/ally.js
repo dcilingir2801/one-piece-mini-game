@@ -1,14 +1,16 @@
 class Ally {
-  constructor(gameScreen) {
+  constructor(gameScreen, allyGifs) {
     this.gameScreen = gameScreen;
-    this.right = -200;
+    this.right = 10;
     this.top = Math.floor(Math.random() * 150 + 390);
     this.bottom = 10;
     this.width = 100;
     this.height = 130;
+    this.allyGifs = allyGifs;
     this.element = document.createElement("img");
 
-    this.element.src = "/images/Hancock.gif";
+    this.randomizeAllyGif();
+
     this.element.style.position = "absolute";
     this.element.style.width = `${this.width}px`;
     this.element.style.height = `${this.height}px`;
@@ -17,6 +19,11 @@ class Ally {
     this.element.style.bottom = `${this.bottom}px`;
 
     this.gameScreen.appendChild(this.element);
+  }
+
+  randomizeAllyGif() {
+    const randomIndex = Math.floor(Math.random() * this.allyGifs.length);
+    this.element.src = this.allyGifs[randomIndex];
   }
 
   updatePosition() {

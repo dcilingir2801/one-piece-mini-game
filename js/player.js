@@ -40,6 +40,7 @@ move() {
     }
 
     this.updatePosition();
+    
   }
 
   updatePosition() {
