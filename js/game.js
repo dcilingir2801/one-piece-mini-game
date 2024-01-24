@@ -7,12 +7,13 @@ class Game {
     this.gameEndScreenLost = document.getElementById("game-end-lost");
     this.energyBar = document.querySelector("#energyBar");
     this.allyBar = document.querySelector("#allyBar");
+    this.audio = document.querySelector('#audio');
     this.player = new Player(
       this.gameScreen,
       200,
       550,
+      100,
       110,
-      120,
       "/images/LuffyRun.gif"
     );
     this.obstacles = [];
@@ -23,34 +24,38 @@ class Game {
       "/images/Hancock.gif",
       "/images/Jinbei.gif",
     ];
-    this.gameLoopFrequency = 16;
   }
 
   start() {
     this.startScreen.style.display = "none";
     this.gameStats.style.display = "flex";
     this.gameScreen.style.display = "flex";
-   // this.createAlly(); 
+    this.createAlly(); 
     this.gameLoop();
 
   }
 
   gameLoop() {
-    console.log("game loop");
+    this.audio.play();
     if (this.gameIsOver) {
       return;
     }
-    this.update();
+  
+    const currentTime = performance.now();
+    const elapsedTime = currentTime - this.lastFrameTime || 0;
+    this.lastFrameTime = currentTime;
+  
+    this.update(elapsedTime);
     window.requestAnimationFrame(() => this.gameLoop());
   }
 
-  update() {
-    this.player.move();
+  update(elapsedTime) {
+    this.player.move(elapsedTime);
     const { width } = this.gameScreen.getBoundingClientRect();
 
     for (let i = 0; i < this.obstacles.length; i++) {
       const obstacle = this.obstacles[i];
-      obstacle.move();
+      obstacle.move(elapsedTime);
       if (this.player.didCollide(obstacle)) {
         obstacle.element.remove();
         this.obstacles.splice(i, 1);
@@ -67,7 +72,7 @@ class Game {
 
     for (let i = 0; i < this.allies.length; i++) {
       const ally = this.allies[i];
-      ally.move();
+      ally.move(elapsedTime);
       if (this.player.didCollideAlly(ally)) {
         this.score++;
         ally.element.remove();
@@ -80,6 +85,7 @@ class Game {
         ally.element.remove();
         this.allies.splice(i, 1);
         i--;
+        this.createAlly(); 
       }
     }
 
@@ -114,6 +120,7 @@ class Game {
     this.gameScreen.style.display = "none";
     this.gameStats.style.display = "none";
     this.gameEndScreenLost.style.display = "flex";
+    this.audio.remove();
   }
 
   endGameWon() {

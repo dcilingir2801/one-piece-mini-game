@@ -19,16 +19,17 @@ class Player {
       this.gameScreen.appendChild(this.element);
     }
 
-move() {
-    this.left += this.directionX;
-    this.top += this.directionY;
+    move(elapsedTime) {
+      this.left += this.directionX * elapsedTime * 0.2; 
+      this.top += this.directionY * elapsedTime * 0.2;
+      this.updatePosition();
 
     if (this.left < 10) {
       this.left = 10;
     }
 
-    if (this.top < 390) {
-      this.top = 390;
+    if (this.top < 400) {
+      this.top = 400;
     }
 
     if (this.left > this.gameScreen.offsetWidth - this.width - 10) {

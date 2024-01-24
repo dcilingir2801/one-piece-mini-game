@@ -1,7 +1,7 @@
 class Ally {
   constructor(gameScreen, allyGifs) {
     this.gameScreen = gameScreen;
-    this.right = 10;
+    this.right = 1;
     this.top = Math.floor(Math.random() * 150 + 390);
     this.bottom = 10;
     this.width = 100;
@@ -31,8 +31,8 @@ class Ally {
     this.element.style.top = `${this.top}px`;
   }
 
-  move() {
-    this.right += 1;
+  move(elapsedTime) {
+    this.right += elapsedTime * 0.2; 
     this.updatePosition();
   }
 }

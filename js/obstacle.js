@@ -1,11 +1,11 @@
 class Obstacle {
     constructor(gameScreen) {
       this.gameScreen = gameScreen;
-      this.right = 10;
-      this.top = Math.floor(Math.random() * 150 + 390);
+      this.right = 100;
+      this.top = Math.floor(Math.random() * 150 + 400);
       this.bottom = 10;
-      this.width = 100;
-      this.height = 130;
+      this.width = 85;
+      this.height = 115;
       this.element = document.createElement("img");
   
       this.element.src = "/images/MarineRun.gif";
@@ -24,8 +24,8 @@ class Obstacle {
       this.element.style.top = `${this.top}px`;
     }
   
-    move() {
-      this.right += 1;
+    move(elapsedTime) {
+      this.right += elapsedTime * 0.2;
       this.updatePosition();
     }
   }

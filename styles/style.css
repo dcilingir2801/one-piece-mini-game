@@ -62,12 +62,11 @@ p {
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.6);
-  border: 5px solid white;
-  border-style: ridge;
-  border-radius: 5%;
+  border: 3px solid black;
+  border-radius: 2%;
   color: black;
   font-weight: bolder;
-  display: none;
+  display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
@@ -79,25 +78,37 @@ p {
 #game-stats img {
   height: 100px;
   width: auto;
+  margin-top: 7px;
 }
 
 #luffyEnergy {
   position: relative;
   height: 20px;
-  width: 80%;
+  width: 77%;
   background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 6%;
   margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 48px;
+  display: flex;
+  flex-direction: row;
 }
 
-#luffyEnergy p {
+/*#luffyEnergy p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 10px;
+}*/
+
+#luffyEnergy img {
+    height: 40px;
+    width: auto;
+    margin-top: -10px;
+    margin-left: -51px;
 }
 
 #energyBar {
@@ -110,21 +121,31 @@ p {
 #collectedAllies {
   position: relative;
   height: 20px;
-  width: 80%;
+  width: 77%;
   background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid black;
-  border-radius: 3%;
+  border: 2px solid black;
+  border-radius: 6%;
   margin-bottom: 10px;
+  margin-left: 48px;
+  display: flex;
+  flex-direction: row;
 }
 
-#collectedAllies p {
+#collectedAllies img {
+    height: 25px;
+    width: auto;
+    margin-top: -1px;
+    margin-left: -58px;
+}
+
+/*#collectedAllies p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 10px;
-}
+}*/
 
 #allyBar {
   position: absolute;

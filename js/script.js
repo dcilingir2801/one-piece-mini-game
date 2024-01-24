@@ -2,7 +2,6 @@ window.onload = function () {
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
     const restartButtonLost = document.getElementById("restart-button-lost")
-
     let game;
   
     startButton.addEventListener("click", function () {
