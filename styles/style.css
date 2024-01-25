@@ -29,7 +29,7 @@ p {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background: url("/images/ace-intro.jpeg") no-repeat fixed;
+  background: url("./images/ace-intro.jpeg") no-repeat fixed;
   background-color: #8db3ca;
   background-position: bottom;
   background-size: 600px;
@@ -47,7 +47,7 @@ p {
   margin: 0;
   overflow: hidden;
   position: relative;
-  background: url("/images/game-background.png");
+  background: url("./images/game-background.png");
   background-size: 100% auto;
   animation: slide 50s linear infinite;
 }
@@ -178,7 +178,7 @@ p {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background: url("/images/AceSaved.gif");
+    background: url("./images/AceSaved.gif");
     background-color: #8db3ca;
     background-size: cover;
     background-repeat: no-repeat;
@@ -203,7 +203,7 @@ p {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background: url("/images/AceDeath.jpeg");
+    background: url("./images/AceDeath.jpeg");
     background-color: #8db3ca;
     background-size: cover;
     background-repeat: no-repeat;
