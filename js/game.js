@@ -39,7 +39,7 @@ class Game {
   }
 
   start() {
-    this.introSong.pause();
+    this.introSong.remove();
     this.startScreen.style.display = "none";
     this.gameStats.style.display = "flex";
     this.gameScreen.style.display = "flex";
