@@ -11,7 +11,9 @@
     <main>
       <!-- #game-intro is initially shown on the game start screen -->
       <div id="game-intro">
-        <audio id="introSong" src="./audio/introSong.mp3"></audio>  
+        <audio id="introSong" autoplay loop>
+            <source src="audio/introSong.mp3" type="audio/mp3">
+        </audio> 
         <img src="./images/logo.png" alt="" class="logo-img" />
         <img src="./images/header-img.png" alt="" class="header-img" />
         <h2>Story</h2>
@@ -28,7 +30,7 @@
 
       <div id="game-container">
         <div id="game-stats">
-            <audio id="drumsOfLiberation" src="./audio/DrumsOfLiberation.mp3"></audio>         
+            <audio id="drumsOfLiberation" loop src="./audio/DrumsOfLiberation.mp3"></audio>         
                 <img src="./images/LuffyBar.png" alt="LuffyMugshot">
                 <div id="luffyEnergy"> 
                     <img src="./images/pixel-heart-2779422_640.png">
