@@ -30,8 +30,6 @@ The game encompasses several key functionalities to provide an immersive and enj
 
 ## Backlog Functionalities
 
-- Debugging issues with slow moving GIFs. <br>
-- No visual and functional overlay of Obstacles and Allies. <br>
 - Improving randomizeAllyGif() to make sure each Ally is shown once and only not yet collected Allies being repeated.
 
 ## Technologies Used
