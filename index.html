@@ -9,7 +9,6 @@
   </head>
   <body>
     <main>
-      <!-- #game-intro is initially shown on the game start screen -->
       <div id="game-intro">
         <audio id="introSong" autoplay loop>
             <source src="audio/introSong.mp3" type="audio/mp3">
@@ -41,18 +40,15 @@
                     <div id="allyBar"></div>
             </div>
         </div>
-        <!-- #game-screen is initially hidden using CSS style display: none -->
         <div id="game-screen"></div>
       </div>
 
-      <!-- #game-end is initially hidden using CSS style display: none -->
       <div id="game-end-won">
         <audio id="happySong" src="./audio/happySong.mp3" loop></audio>  
         <img src="./images/logo.png" alt="" class="logo-img" />
         <img src="./images/header-img.png" alt="" class="header-img" />
         <h2>CONGRATULATIONS, YOU SAVED ACE!</h2>
         <br />
-
         <button id="restart-button">Restart</button>
       </div>
 
