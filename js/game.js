@@ -17,7 +17,7 @@ class Game {
       550,
       100,
       110,
-      "/images/LuffyRun.gif"
+      "./images/LuffyRun.gif"
     );
     this.obstacles = [];
     this.allies = [];
@@ -25,16 +25,16 @@ class Game {
     this.lives = 3;
     this.score = 0;
     this.allyGifs = [
-      "/images/Hancock.gif",
-      "/images/Jinbei.gif",
-      "/images/BonChan.gif",
-      "/images/Ivankov.gif",
-      "/images/Whitebeard.gif",
-      "/images/Buggy.gif",
-      "/images/Crocodile.gif",
-      "/images/LawNew.gif",
-      "/images/Mr3.gif",
-  //  "/images/Marco.gif"
+      "./images/Hancock.gif",
+      "./images/Jinbei.gif",
+      "./images/BonChan.gif",
+      "./images/Ivankov.gif",
+      "./images/Whitebeard.gif",
+      "./images/Buggy.gif",
+      "./images/Crocodile.gif",
+      "./images/LawNew.gif",
+      "./images/Mr3.gif",
+  //  "./images/Marco.gif"
     ];
   }
 
