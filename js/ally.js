@@ -35,4 +35,20 @@ class Ally {
     this.right += elapsedTime * 0.2; 
     this.updatePosition();
   }
+
+  /*didCollideAllyObstacle(ally) {
+    const obstacleRect = this.element.getBoundingClientRect();
+    const allyRect = ally.element.getBoundingClientRect();
+
+    if (
+      obstacleRect.left < allyRect.right &&
+      obstacleRect.right > allyRect.left &&
+      obstacleRect.top < allyRect.bottom &&
+      obstacleRect.bottom > allyRect.top
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }*/
 }

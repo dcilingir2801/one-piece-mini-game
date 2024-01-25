@@ -34,7 +34,7 @@ class Game {
       "./images/Crocodile.gif",
       "./images/LawNew.gif",
       "./images/Mr3.gif",
-  //  "./images/Marco.gif"
+      "./images/Shanks.gif"
     ];
   }
 

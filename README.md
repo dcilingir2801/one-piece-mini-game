@@ -93,7 +93,7 @@ The game encompasses several key functionalities to provide an immersive and enj
 
   - Obstacle
 
-    Obstacle constructor<br<>
+    Obstacle constructor<br>
     Obstacle.updatePosition();<br>
     Obstacle.move(elapsedTime);<br>
 
@@ -104,7 +104,7 @@ The game encompasses several key functionalities to provide an immersive and enj
     Ally constructor<br>
     Ally.randomizeAllyGif();<br>
     Ally.updatePosition();<br>
-    Ally.move(elapsedTime); <br>
+    Ally.move(elapsedTime);<br>
 
 <h3>CSS File</h3>
 
@@ -114,8 +114,6 @@ The game encompasses several key functionalities to provide an immersive and enj
 
 <h3>Deploy</h3>
 <a href="https://dcilingir2801.github.io/one-piece-mini-game/">Play the Game!</a>
-
-<h3>Slides</3>
 
 ## Credits
 
